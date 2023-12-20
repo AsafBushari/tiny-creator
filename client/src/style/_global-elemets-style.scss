@@ -1,0 +1,87 @@
+.sub-title {
+    font-size: $s-font-size;
+    color: $grey;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row,
+.col {
+    .s-gap {
+        gap: 5px;
+    }
+
+    .m-gap {
+        gap: 10px;
+    }
+
+    .l-gap {
+        gap: 15px;
+    }
+
+    .xl-gap {
+        gap: 20px;
+    }
+
+    .center {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid $light-blue;
+    transition: border 0.2s linear;
+    width: 100%;
+    font-size: $input-font-size;
+
+    &:focus {
+        border: 2px solid $blue;
+        transition: border 0.2s linear;
+    }
+}
+
+a,
+button {
+    &:hover {
+        cursor: pointer;
+        transition: background-color 0.2s linear;
+    }
+
+    transition: background-color 0.2s linear;
+    font-size: $button-font-size;
+}
+
+// animations
+
+.fade-element {
+    animation: infiniteFade 1.5s ease infinite;
+    /* Adjust the duration as needed */
+}
+
+@keyframes infiniteFade {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}

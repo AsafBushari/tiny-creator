@@ -1,0 +1,24 @@
+// colors
+$grey: #acacac;
+$light-grey: #dde4ee;
+$blue: #0152c4;
+$light-blue: #0152c433;
+$deep-blue: #003074;
+$green: #2ea58d;
+$light-green: #2ea58d33;
+$red: #f15e60;
+$light-red: #f15e6033;
+
+// fonts size
+$s-font-size: 16px;
+$m-font-size: 18px;
+$l-font-size: 20px;
+$xl-font-size: 22px;
+$sub-title-font-size: $s-font-size;
+
+$input-font-size: $s-font-size;
+$label-font-size: calc($input-font-size - 6px);
+$button-font-size: $s-font-size;
+
+// vars for elemets style
+$btn-border-radius: 15px;

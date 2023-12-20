@@ -1,0 +1,18 @@
+input{
+    &:focus{
+        outline: none;
+    }
+}
+button{
+    border: unset;
+}
+html,
+body,
+h1,
+h2,
+p{
+  margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
