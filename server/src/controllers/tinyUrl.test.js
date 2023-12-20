@@ -60,9 +60,6 @@ describe('POST /get-tiny-to-full', () => {
 
 });
 
-afterAll(async () => {
-        await app.close();
-        });
 
 
    
