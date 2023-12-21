@@ -5,14 +5,9 @@ services:
       container_name: tiny-creator-client_c
       ports:
         - '8080:8080'
-      volumes:
-        - ./client:/client-app
-        - /client/node_modules
+
   server:
     build: ./server
     container_name: tiny-creator-server_c
     ports:
       - '3500:3500'
-    volumes:
-      - ./server:/server-app
-      - /server/node_modules

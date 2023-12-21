@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: URL Shortening API
+  description: API for URL shortening and expanding functionality
+  version: 1.0.0
+servers:
+  - url: http://localhost:3500
+paths:
+  /get-full-to-tiny:
+    post:
+      summary: Shorten a URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  format: uri
+      responses:
+        "200":
+          description: Successfully shortened URL
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  url:
+                    type: string
+        "500":
+          description: Server error or invalid URL
+          content:
+            application/json:
+              schema:
+                 Error:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+    description: Generate a shortened URL from a given full URL
+
+  /get-tiny-to-full:
+    post:
+      summary: Expand a shortened URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  format: uri
+      responses:
+        "200":
+          description: Successfully expanded URL
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  fullUrl:
+                    type: string
+        "500":
+          description: Server error or invalid URL
+          content:
+            application/json:
+              schema:
+                Error:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+    description: Retrieve the full URL from a given shortened URL
+
